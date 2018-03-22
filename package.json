@@ -9,7 +9,8 @@
     "watch": "webpack --watch",
     "start": "webpack-dev-server --open",
     "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "precommit": "eslint"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "eslint": "^4.19.1",
     "eslint-loader": "^2.0.0",
     "html-webpack-plugin": "^3.0.6",
+    "husky": "^0.14.3",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1"

@@ -1,3 +1,5 @@
+import Sorter from '../utils/sorter';
+
 export default class Host {
     constructor(name) {
         this._name = name;
@@ -37,8 +39,12 @@ export default class Host {
     }
 
     sortApplications() {
-        this._applications.sort((a, b) => {
+        const t0 = performance.now();
+        /*this._applications.sort((a, b) => {
             return b.apdex - a.apdex;
-        });
+        });*/
+        this._applications = Sorter.sortApplications(this._applications);
+        const t1 = performance.now();
+        console.log("Sort applications took " + (t1 - t0) + " milliseconds.");
     }
 }

@@ -2,7 +2,7 @@ body{
     background-color: rgb(247, 247, 247);
 }
 
-/*** FONT FACE LOAD ***/
+/*** FONT FACE LOADING ***/
 @font-face {
     font-family: "HelveticaNeue-Bold";
     src: url(../fonts/helvetica-neue-bold.ttf);
@@ -25,6 +25,7 @@ body{
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: flex-end;
+    grid-gap: 5px;
 }
 
 #main-wrapper .header-wrapper .user-info{
@@ -40,7 +41,7 @@ body{
 #main-wrapper .header-wrapper .grid-toggle-wrapper{
     justify-content: flex-end;
     display: flex;
-    margin-left: 30px;
+    margin-left: 25px;
 }
 
 #main-wrapper .header-wrapper .header-tittle{
@@ -61,6 +62,7 @@ body{
 #main-wrapper .host{
     background-color: white;
     padding: 30px;
+    height: fit-content;
 }
 
 #main-wrapper .host .host-name{
@@ -76,7 +78,7 @@ body{
 
 #main-wrapper .applications-list .application{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 35px auto;
     padding-top: 23px;
 }
 
@@ -87,12 +89,8 @@ body{
     line-height: 19px;
 }
 
-/******* HOSTS LIST STYLE ********/
-#hosts-wrapper.list{
-
-}
-
 /******** HOSTS GRID STYLE ********/
+
 #hosts-wrapper.grid{
     grid-template-columns: 375px 375px;
 }

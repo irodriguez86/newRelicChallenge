@@ -26,16 +26,41 @@
     "@babel/core": "^7.0.0-beta.42",
     "@babel/plugin-proposal-class-properties": "^7.0.0-beta.42",
     "@babel/preset-env": "^7.0.0-beta.42",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^22.4.3",
     "babel-loader": "^8.0.0-beta.2",
+    "babel-preset-env": "^2.0.0-alpha.20",
     "copy-webpack-plugin": "^4.5.1",
     "eslint": "^4.19.1",
     "eslint-loader": "^2.0.0",
     "html-webpack-include-assets-plugin": "^1.0.4",
     "html-webpack-plugin": "^3.0.6",
     "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "regenerator-runtime": "^0.11.1",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "jest": {
+    "roots": [
+      "src/tests/"
+    ],
+    "transform": {
+      ".*": "./node_modules/babel-jest"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/js/**/*.{js}",
+      "!**/node_modules/**",
+      "!**/dist/**"
+    ],
+    "coverageDirectory": "/coverage",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "es6"
+    ]
+  }
 }

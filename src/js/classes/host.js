@@ -38,7 +38,7 @@ export default class Host {
 
     sortApplications() {
         this._applications.sort((a, b) => {
-            return a.apdex - b.apdex;
+            return b.apdex - a.apdex;
         });
     }
 }

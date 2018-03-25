@@ -1,4 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/js/index.js',
@@ -33,9 +35,17 @@ module.exports = {
         contentBase: './dist'
     },
     plugins: [
+        new CopyWebpackPlugin([
+            { from: './src/css/', to: 'css/'},
+            { from: './src/fonts/', to: 'fonts/'}
+        ]),
         new HtmlWebpackPlugin({
             title: 'New Relic challenge',
             template: './src/html/index.html'
+        }),
+        new HtmlWebpackIncludeAssetsPlugin({
+            assets: ['./css/main.css'],
+            append: true
         })
     ]
 };

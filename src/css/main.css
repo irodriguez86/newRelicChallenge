@@ -1,0 +1,98 @@
+body{
+    background-color: rgb(247, 247, 247);
+}
+
+/*** FONT FACE LOAD ***/
+@font-face {
+    font-family: "HelveticaNeue-Bold";
+    src: url(../fonts/helvetica-neue-bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url(../fonts/helvetica-neue.ttf);
+}
+
+#main-wrapper{
+    width: 840px;
+    margin: 0 auto;
+}
+
+/******** HEADER ********/
+#main-wrapper .header-wrapper{
+    margin: 0 30px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: flex-end;
+}
+
+#main-wrapper .header-wrapper .user-info{
+    color: black;
+    font-size: 18px;
+    font-family: "HelveticaNeue", sans-serif;
+    line-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#main-wrapper .header-wrapper .grid-toggle-wrapper{
+    justify-content: flex-end;
+    display: flex;
+    margin-left: 30px;
+}
+
+#main-wrapper .header-wrapper .header-tittle{
+    color: black;
+    font-size: 35px;
+    font-family: "HelveticaNeue-Bold", sans-serif;
+    line-height: 43px;
+}
+
+/******** HOSTS LIST ********/
+
+#hosts-wrapper{
+    display: grid;
+    grid-gap: 30px;
+    padding: 30px;
+}
+
+#main-wrapper .host{
+    background-color: white;
+    padding: 30px;
+}
+
+#main-wrapper .host .host-name{
+    color: black;
+    font-size: 16px;
+    font-family: HelveticaNeue-Bold, sans-serif;
+    line-height: 1.2;
+}
+
+#main-wrapper .host .applications-list{
+    list-style: none;
+}
+
+#main-wrapper .applications-list .application{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 23px;
+}
+
+#main-wrapper .applications-list .application .app-apdex{
+    color: rgba(67, 67, 67, 0.62);
+    font-size: 13px;
+    font-family: HelveticaNeue-Bold, sans-serif;
+    line-height: 19px;
+}
+
+/******* HOSTS LIST STYLE ********/
+#hosts-wrapper.list{
+
+}
+
+/******** HOSTS GRID STYLE ********/
+#hosts-wrapper.grid{
+    grid-template-columns: 375px 375px;
+}

@@ -4,7 +4,7 @@
   "description": "New relic Apdex Board challenge",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack",
     "watch": "webpack-dev-server --watch --open",
     "start": "webpack-dev-server --open",

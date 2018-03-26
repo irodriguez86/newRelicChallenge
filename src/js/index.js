@@ -17,13 +17,15 @@ document.getElementsByClassName('grid-toggle-wrapper')[0].addEventListener('clic
 
     hostWrapper.classList.remove("grid", "list");
 
+    let labelText = 'Show as list';
+    let listType = 'grid';
+
     if (listTypeCheckbox.checked === true) {
-        listTypeCheckbox.labels[0].innerText = 'Show as an awesome grid';
-        hostWrapper.classList.add("list");
-    }else{
-        listTypeCheckbox.labels[0].innerText = 'Show as list';
-        hostWrapper.classList.add("grid");
+        labelText = 'Show as an awesome grid';
+        listType = 'list';
     }
+    listTypeCheckbox.parentNode.getElementsByTagName('label')[0].innerText = labelText;
+    hostWrapper.classList.add(listType);
 });
 
 /**

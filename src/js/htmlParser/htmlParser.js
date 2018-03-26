@@ -18,7 +18,8 @@ export default class HtmlParser {
      */
     static renderApplications(applications) {
         let applicationList = '';
-        for (let x = 0; x < 5; x++) {
+        const end = applications.length < 5 ? applications.length : 5;
+        for (let x = 0; x < end; x++) {
             applicationList = applicationList.concat(HtmlParser.renderApplication(applications[x]));
         }
 
